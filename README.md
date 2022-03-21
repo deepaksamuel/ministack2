@@ -15,8 +15,9 @@ Instructions to run:
 
 * After initializing ROOT by sourcing the right `thisroot.sh` file,
 * compile the code `main.cpp` using 
-    * g++  `root-config --glibs --cflags` ino_analysis.cpp main.cpp
-    * Run the programme using `./a.out`
+    * g++  `root-config --glibs --cflags` ino_analysis.cpp main.cpp or
+    * g++  `root-config --cflags` ino_analysis.cpp main.cpp `root-config --glibs` -o out
+    * Run the programme using `./a.out` or `./out` (if using the second compile command)
     * The file analyzes the input file `INORUN_20161230_161712.ire` (can be changed in `main.cpp`)
     * In the analysis, a straight line is fit to muon track from which the slope and intercepts of the 2 projections are estimated. From the slopes and the intercepts, the angle of arrival is then computed.
     * The output is stored in `out.fit` (can be changed in `ino_analysis.cpp`)
